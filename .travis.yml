@@ -24,6 +24,7 @@ matrix:
 addons:
    apt:
       packages:
+      - libnet-snmp-perl
       - libsnmp-dev
       - libsnmp-perl
 # Dist::Zilla would make this easier
