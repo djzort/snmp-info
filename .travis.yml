@@ -24,7 +24,7 @@ matrix:
 addons:
    apt:
       packages:
-#      - libsnmp-dev
+      - libsnmp-dev
 # Dist::Zilla would make this easier
 before_install:
 # for some reason, travis-perl doesnt work out that it needs to install:
