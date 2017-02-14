@@ -24,7 +24,6 @@ matrix:
 addons:
    apt:
       packages:
-      - libnet-snmp-perl
       - libsnmp-dev
 before_install:
   - cpanm --quiet --notest Crypt::DES   Crypt::Rijndael  Digest::HMAC  Digest::SHA1  Socket6
