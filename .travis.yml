@@ -30,7 +30,7 @@ before_install:
   - sudo make install
   - sudo chown -R travis:travis .
   - cd perl
-  - cpanm --verbose .
+  - cpanm --verbose --notest .
   - cpanm --notest --verbose Crypt::DES   Crypt::Rijndael  Digest::HMAC  Digest::SHA1  Socket6
   - cpanm --quiet --notest --skip-satisfied Dist::Zilla
   - cd ..
