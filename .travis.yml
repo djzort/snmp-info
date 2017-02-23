@@ -1,9 +1,9 @@
-sudo: true
+sudo: required
 language: perl
 os:
   - linux
 perl:
-   - 'blead'
+#   - 'blead'
    - '5.22-shrplib'
 #   - '5.22'
 #   - '5.20'
@@ -14,14 +14,17 @@ perl:
 #   - '5.10'
 #   - '5.8'
 matrix:
-   allow_failures:
-      - perl: 'blead'
+#   allow_failures:
+#      - perl: 'blead'
 #      - perl: '5.8'
    fast_finish: true
 #   include:
 #      - perl: '5.20'
 #        env: COVERAGE=1
 before_install:
+  - git config --global user.name "TravisCI"
+  - git config --global user.email $HOSTNAME":not-for-mail@travis-ci.org"
+install:
 # Net-SNMP needs to built from scratch as libsnmp-dev links against system perl
   - wget https://downloads.sourceforge.net/project/net-snmp/net-snmp/5.7.3/net-snmp-5.7.3.tar.gz
   - tar zxvf net-snmp-5.7.3.tar.gz
