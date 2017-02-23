@@ -28,6 +28,7 @@ before_install:
   - ./configure --with-default-snmp-version="3" --with-sys-contact="@@no.where" --with-sys-location="Unknown" --with-logfile="/var/log/snmpd.log" --with-persistent-directory="/var/net-snmp"
   - make
   - sudo make install
+  - chown -R travis:travis .
   - cd perl
   - cpanm --verbose .
   - cpanm --notest --verbose Crypt::DES   Crypt::Rijndael  Digest::HMAC  Digest::SHA1  Socket6
