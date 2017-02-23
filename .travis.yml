@@ -41,7 +41,7 @@ install:
   - cd ../..
   - wget -q https://downloads.sourceforge.net/project/netdisco/netdisco-mibs/latest-snapshot/netdisco-mibs-snapshot.tar.gz
   - mkdir -p ~/.snmp/mibs
-  - tar xfz netdisc-mibs-snapshot.tar.gz -C ~/.snmp/mibs/ --strip 1
+  - tar xfz netdisco-mibs-snapshot.tar.gz -C ~/.snmp/mibs/ --strip 1
   - echo "mibs +ALL" > ~/.snmp/snmp.conf
   - "dzil authordeps          --missing | grep -vP '[^\\w:]' | xargs -n 5 -P 10 cpanm --quiet --notest"
   - "dzil listdeps   --author --missing | grep -vP '[^\\w:]' | cpanm --quiet"
